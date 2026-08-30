@@ -1,0 +1,27 @@
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Personal research data (not for public)
+data/used_prices/
+
+# Keep output/ in git — weekly tracker commits price history there
+# Individual local runs are ignored by filename pattern:
+output/*_local.json
+
+# Personal documents (not for public)
+docs/Car_Plan_2027.md
+docs/FINAL_CAR_DECISION_REFERENCE.md
+research/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.DS_Store
+
+# Environment
+.env
+output/*.json

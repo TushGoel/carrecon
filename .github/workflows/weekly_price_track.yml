@@ -1,0 +1,52 @@
+name: Weekly Price Tracker
+
+on:
+  schedule:
+    # Every Monday at 9am UTC (4am ET, 3am CT)
+    - cron: "0 9 * * 1"
+  workflow_dispatch:
+    # Allow manual trigger from GitHub UI
+
+jobs:
+  track-prices:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          playwright install chromium
+          playwright install-deps chromium
+
+      - name: Run price tracker
+        # Customize searches via GitHub repository secrets:
+        #   Settings → Secrets → SEARCH_ZIP (your ZIP code)
+        # Or edit this step directly with your --make/--model/--zip
+        env:
+          SEARCH_ZIP: ${{ secrets.SEARCH_ZIP || '10001' }}
+        run: |
+          mkdir -p output
+          python3 main.py --make toyota --model sienna --zip $SEARCH_ZIP --year-min 2022 --year-max 2025 --save
+          python3 main.py --make honda --model odyssey --zip $SEARCH_ZIP --year-min 2022 --save
+        continue-on-error: true
+
+      - name: Commit price history
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add output/
+          if git diff --staged --quiet; then
+            echo "No new price data to commit"
+          else
+            DATE=$(date +'%Y-%m-%d')
+            git commit -m "chore: weekly price snapshot ${DATE}"
+            git push
+          fi

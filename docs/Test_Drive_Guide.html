@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tushanvi — Test Drive Guide 2027</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f5f5f7; color: #1d1d1f; padding: 20px; }
+  h1 { font-size: 24px; font-weight: 700; color: #1d1d1f; margin-bottom: 4px; }
+  h2 { font-size: 18px; font-weight: 600; color: #1d1d1f; margin: 24px 0 12px; }
+  h3 { font-size: 15px; font-weight: 600; color: #3a3a3c; margin: 16px 0 8px; }
+  .subtitle { color: #6e6e73; font-size: 14px; margin-bottom: 24px; }
+  .card { background: white; border-radius: 12px; padding: 20px; margin-bottom: 16px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .sienna { border-left: 4px solid #0071e3; }
+  .gh { border-left: 4px solid #34c759; }
+  .car-header { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+  .badge-sienna { background: #0071e3; color: white; padding: 3px 10px; border-radius: 20px; font-size: 12px; font-weight: 600; }
+  .badge-gh { background: #34c759; color: white; padding: 3px 10px; border-radius: 20px; font-size: 12px; font-weight: 600; }
+  .badge-rec { background: #ff9500; color: white; padding: 3px 10px; border-radius: 20px; font-size: 12px; font-weight: 600; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th { background: #f5f5f7; padding: 8px 10px; text-align: left; font-weight: 600; font-size: 12px; color: #6e6e73; }
+  td { padding: 8px 10px; border-bottom: 1px solid #f0f0f0; vertical-align: top; }
+  tr:last-child td { border-bottom: none; }
+  .win-sienna { color: #0071e3; font-weight: 600; }
+  .win-gh { color: #34c759; font-weight: 600; }
+  .win-tie { color: #8e8e93; }
+  .check-list { list-style: none; }
+  .check-list li { padding: 6px 0; border-bottom: 1px solid #f0f0f0; font-size: 13px; display: flex; align-items: flex-start; gap: 8px; }
+  .check-list li:last-child { border-bottom: none; }
+  .check-list li::before { content: '☐'; font-size: 16px; color: #8e8e93; flex-shrink: 0; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .stat { background: #f5f5f7; border-radius: 8px; padding: 12px; text-align: center; }
+  .stat-val { font-size: 20px; font-weight: 700; color: #1d1d1f; }
+  .stat-label { font-size: 11px; color: #6e6e73; margin-top: 2px; }
+  .score-row { display: flex; justify-content: space-between; align-items: center; padding: 6px 0; border-bottom: 1px solid #f0f0f0; font-size: 13px; }
+  .score-row:last-child { border-bottom: none; }
+  .score-sienna { background: #e8f4ff; color: #0071e3; padding: 2px 8px; border-radius: 10px; font-weight: 600; font-size: 12px; }
+  .score-gh { background: #e8faf0; color: #34c759; padding: 2px 8px; border-radius: 10px; font-weight: 600; font-size: 12px; }
+  .score-tie { background: #f5f5f7; color: #8e8e93; padding: 2px 8px; border-radius: 10px; font-weight: 600; font-size: 12px; }
+  .verdict { background: linear-gradient(135deg, #0071e3, #34aadc); color: white; border-radius: 12px; padding: 20px; margin-bottom: 16px; }
+  .verdict h2 { color: white; margin-top: 0; }
+  .verdict p { font-size: 14px; opacity: 0.9; line-height: 1.6; }
+  .note { background: #fff9e6; border-left: 3px solid #ff9500; padding: 10px 14px; border-radius: 0 8px 8px 0; font-size: 13px; color: #3a3a3c; margin: 10px 0; }
+  .section-label { font-size: 11px; font-weight: 700; text-transform: uppercase; color: #6e6e73; letter-spacing: 0.5px; margin-bottom: 8px; }
+  @media (max-width: 600px) { .two-col { grid-template-columns: 1fr; } .stat-grid { grid-template-columns: repeat(2, 1fr); } }
+</style>
+</head>
+<body>
+
+<h1>🚗 Test Drive Guide</h1>
+<p class="subtitle">Tushanvi · January 2027 · Toyota Sienna vs Grand Highlander Hybrid</p>
+
+<!-- VERDICT CARD -->
+<div class="verdict">
+  <h2>📊 Data Recommendation</h2>
+  <p><strong>Toyota Sienna Hybrid Woodland AWD</strong> leads on 12 of 16 factors including sliding doors, cargo space, driver comfort, fuel economy, reliability data, and price. Grand Highlander wins on look, status, and 3rd row comfort.</p>
+  <p style="margin-top:10px"><strong>Final call:</strong> Test drive both. Let the cars decide.</p>
+</div>
+
+<!-- QUICK STATS -->
+<div class="card">
+  <div class="section-label">At a Glance</div>
+  <div class="two-col">
+    <div>
+      <div class="car-header"><span class="badge-sienna">Sienna</span><span style="font-weight:600;font-size:15px">Woodland AWD 2022-23</span></div>
+      <div class="stat-grid">
+        <div class="stat"><div class="stat-val">36</div><div class="stat-label">MPG Combined</div></div>
+        <div class="stat"><div class="stat-val">~42</div><div class="stat-label">Real-World MPG</div></div>
+        <div class="stat"><div class="stat-val">8</div><div class="stat-label">Seats</div></div>
+        <div class="stat"><div class="stat-val">33.5</div><div class="stat-label">Cargo cu ft</div></div>
+        <div class="stat"><div class="stat-val">$40-44K</div><div class="stat-label">Used Price</div></div>
+        <div class="stat"><div class="stat-val">8.0</div><div class="stat-label">Edmunds /10</div></div>
+      </div>
+    </div>
+    <div>
+      <div class="car-header"><span class="badge-gh">GH</span><span style="font-weight:600;font-size:15px">XLE AWD 2024</span></div>
+      <div class="stat-grid">
+        <div class="stat"><div class="stat-val">35</div><div class="stat-label">MPG Combined</div></div>
+        <div class="stat"><div class="stat-val">~35</div><div class="stat-label">Real-World MPG</div></div>
+        <div class="stat"><div class="stat-val">7-8</div><div class="stat-label">Seats</div></div>
+        <div class="stat"><div class="stat-val">20.6</div><div class="stat-label">Cargo cu ft</div></div>
+        <div class="stat"><div class="stat-val">$42-46K</div><div class="stat-label">Used Price</div></div>
+        <div class="stat"><div class="stat-val">8.4</div><div class="stat-label">Edmunds /10</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FULL COMPARISON TABLE -->
+<div class="card">
+  <h2>Complete Comparison</h2>
+  <table>
+    <thead>
+      <tr><th>Factor</th><th>Sienna Woodland AWD</th><th>GH Hybrid XLE AWD</th><th>Winner</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Sliding doors</strong></td><td>✅ Both sides — power</td><td>❌ Swing doors</td><td class="win-sienna">Sienna</td></tr>
+      <tr><td><strong>Walkthrough (2 car seats)</strong></td><td>✅ Yes — middle gap</td><td>❌ No walkthrough</td><td class="win-sienna">Sienna</td></tr>
+      <tr><td><strong>Cargo (3 rows up)</strong></td><td>✅ 33.5 cu ft</td><td>⚠️ 20.6 cu ft</td><td class="win-sienna">Sienna +63%</td></tr>
+      <tr><td><strong>2nd row legroom</strong></td><td>40.9 inches</td><td>38.6 inches</td><td class="win-sienna">Sienna</td></tr>
+      <tr><td><strong>3rd row legroom (5'8")</strong></td><td>⚠️ 34.9 inches</td><td>✅ 36.1 inches</td><td class="win-gh">GH</td></tr>
+      <tr><td><strong>3rd row recline</strong></td><td>⚠️ Minimal ~10-15°</td><td>✅ Better ~20-25°</td><td class="win-gh">GH</td></tr>
+      <tr><td><strong>Driver comfort (long trips)</strong></td><td>✅ Smoother, quieter</td><td>⚠️ Slightly stiffer</td><td class="win-sienna">Sienna</td></tr>
+      <tr><td><strong>Solo driving ease</strong></td><td>✅ Light, car-like</td><td>⚠️ Heavier, SUV feel</td><td class="win-sienna">Sienna</td></tr>
+      <tr><td><strong>Road noise</strong></td><td>✅ Very quiet</td><td>⚠️ More wind noise</td><td class="win-sienna">Sienna</td></tr>
+      <tr><td><strong>City MPG</strong></td><td>35 (real ~42)</td><td>35 (real ~35)</td><td class="win-sienna">Sienna</td></tr>
+      <tr><td><strong>Highway MPG</strong></td><td>36</td><td>35</td><td class="win-sienna">Sienna</td></tr>
+      <tr><td><strong>AWD</strong></td><td>✅ Standard</td><td>✅ Standard</td><td class="win-tie">Tie</td></tr>
+      <tr><td><strong>Safety (NHTSA/IIHS)</strong></td><td>✅ 5-star / Top Pick</td><td>✅ 5-star / Top Pick</td><td class="win-tie">Tie</td></tr>
+      <tr><td><strong>Toyota Safety Sense</strong></td><td>✅ All trims</td><td>✅ All trims</td><td class="win-tie">Tie</td></tr>
+      <tr><td><strong>Reliability data</strong></td><td>✅ 3-5 years proven</td><td>⚠️ 1-2 years only</td><td class="win-sienna">Sienna</td></tr>
+      <tr><td><strong>Parts / mechanic familiarity</strong></td><td>✅ Abundant</td><td>⚠️ Newer = fewer</td><td class="win-sienna">Sienna</td></tr>
+      <tr><td><strong>Hybrid battery warranty</strong></td><td>10yr / 150K miles</td><td>10yr / 150K miles</td><td class="win-tie">Tie</td></tr>
+      <tr><td><strong>Used price</strong></td><td>✅ $40-44K</td><td>$42-46K</td><td class="win-sienna">Sienna</td></tr>
+      <tr><td><strong>Used inventory</strong></td><td>✅ Abundant</td><td>⚠️ 2024 only — limited</td><td class="win-sienna">Sienna</td></tr>
+      <tr><td><strong>Annual fuel cost</strong></td><td>✅ ~$1,250/yr</td><td>~$1,500/yr</td><td class="win-sienna">Sienna</td></tr>
+      <tr><td><strong>5-yr fuel savings</strong></td><td>+$1,250 saved</td><td>baseline</td><td class="win-sienna">Sienna</td></tr>
+      <tr><td><strong>Status / look</strong></td><td>⚠️ Minivan</td><td>✅ Premium SUV</td><td class="win-gh">GH</td></tr>
+      <tr><td><strong>Interior premium feel</strong></td><td>✅ Good</td><td>✅✅ Better</td><td class="win-gh">GH</td></tr>
+      <tr><td><strong>Ground clearance</strong></td><td>6.5 inches</td><td>✅ 8.0 inches</td><td class="win-gh">GH</td></tr>
+      <tr><td><strong>Edmunds score</strong></td><td>8.0/10</td><td>✅ 8.4/10</td><td class="win-gh">GH</td></tr>
+      <tr style="background:#f9f9f9"><td><strong>TOTAL SCORE</strong></td><td><strong class="win-sienna">12 wins</strong></td><td><strong class="win-gh">5 wins</strong></td><td class="win-sienna">Sienna</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- TEST DRIVE CHECKLIST -->
+<h2>Test Drive Checklist</h2>
+<div class="two-col">
+
+  <!-- SIENNA CHECKLIST -->
+  <div class="card sienna">
+    <div class="car-header"><span class="badge-sienna">Sienna</span><span style="font-weight:600">Woodland AWD</span></div>
+    <h3>Doors & Access</h3>
+    <ul class="check-list">
+      <li>Slide both doors from outside — feel power mechanism</li>
+      <li>Slide both doors from inside — test button location</li>
+      <li>Walk through middle gap (where car seats will sit)</li>
+      <li>Install/remove car seat — note ease of access</li>
+      <li>Open rear hatch — visualize double stroller</li>
+    </ul>
+    <h3>Driver Experience</h3>
+    <ul class="check-list">
+      <li>Tushar drives — highway feel, body roll, steering weight</li>
+      <li>Tanvi drives — seat height, visibility, reach to controls</li>
+      <li>Drive over a bump — note ride smoothness</li>
+      <li>Drive at 60+ mph — note road/wind noise level</li>
+      <li>Tight turn or parking — feel maneuverability</li>
+    </ul>
+    <h3>Interior</h3>
+    <ul class="check-list">
+      <li>Sit in 2nd row — legroom with car seat ahead of you</li>
+      <li>Sit in 3rd row — legroom, headroom, recline</li>
+      <li>Check infotainment — CarPlay connect, screen size</li>
+      <li>Check cargo area — measure stroller mentally</li>
+      <li>Check all storage — cup holders, door pockets, center console</li>
+    </ul>
+    <h3>Practical Checks</h3>
+    <ul class="check-list">
+      <li>AWD confirmed on window sticker (Woodland = standard)</li>
+      <li>Confirm it IS a hybrid (all Siennas are — just verify)</li>
+      <li>Check under 40,000 miles</li>
+      <li>Request Carfax / service history</li>
+      <li>CPO (Certified Pre-Owned) warranty status</li>
+    </ul>
+  </div>
+
+  <!-- GH CHECKLIST -->
+  <div class="card gh">
+    <div class="car-header"><span class="badge-gh">GH</span><span style="font-weight:600">Hybrid XLE AWD</span></div>
+    <h3>Doors & Access</h3>
+    <ul class="check-list">
+      <li>Open rear swing doors — note swing arc needed</li>
+      <li>Test car seat install in 2nd row captain chair</li>
+      <li>Try to reach 3rd row with 2nd row car seat installed</li>
+      <li>Open rear hatch — visualize stroller + bags together</li>
+      <li>Note door weight — easy for Tanvi to manage?</li>
+    </ul>
+    <h3>Driver Experience</h3>
+    <ul class="check-list">
+      <li>Tushar drives — highway feel, body roll, steering weight</li>
+      <li>Tanvi drives — high seating position, visibility, reach</li>
+      <li>Drive over a bump — note ride quality vs Sienna</li>
+      <li>Drive at 60+ mph — compare road noise to Sienna</li>
+      <li>Tight parking — feel the size difference</li>
+    </ul>
+    <h3>Interior</h3>
+    <ul class="check-list">
+      <li>Sit in 3rd row — test 36.1" legroom at 5'8"</li>
+      <li>Test 3rd row recline — is it meaningfully better?</li>
+      <li>Check infotainment — CarPlay, screen, ease of use</li>
+      <li>Assess cargo with 3rd row up vs Sienna (20.6 cu ft)</li>
+      <li>Feel interior material quality vs Sienna</li>
+    </ul>
+    <h3>Practical Checks</h3>
+    <ul class="check-list">
+      <li>Confirm XLE AWD trim (not FWD XLE)</li>
+      <li>Confirm HYBRID version (not gas-only GH)</li>
+      <li>Confirm 2024 model year</li>
+      <li>Request Carfax / service history</li>
+      <li>CPO (Certified Pre-Owned) warranty status</li>
+    </ul>
+  </div>
+</div>
+
+<!-- QUESTIONS TO ASK DEALER -->
+<div class="card">
+  <h2>Questions to Ask Every Dealer</h2>
+  <table>
+    <thead><tr><th>#</th><th>Question</th><th>Why It Matters</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>Is this CPO (Certified Pre-Owned)?</td><td>Factory warranty = peace of mind</td></tr>
+      <tr><td>2</td><td>Can I see the full Carfax report?</td><td>Accident history, number of owners</td></tr>
+      <tr><td>3</td><td>Has it been in any accidents?</td><td>Frame damage = avoid</td></tr>
+      <tr><td>4</td><td>What's the remaining hybrid battery warranty?</td><td>10yr/150K from original sale date</td></tr>
+      <tr><td>5</td><td>Can I take it for a pre-purchase inspection?</td><td>Independent mechanic check</td></tr>
+      <tr><td>6</td><td>What financing rate can you offer?</td><td>Compare to your credit union rate first</td></tr>
+      <tr><td>7</td><td>Is AWD confirmed on this specific unit?</td><td>Don't assume — verify on sticker</td></tr>
+      <tr><td>8</td><td>What's the out-the-door price?</td><td>Tax + title + fees = real cost</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- AFTER TEST DRIVE SCORECARD -->
+<div class="card">
+  <h2>After Test Drive — Score Each Factor (1-5)</h2>
+  <table>
+    <thead><tr><th>Factor</th><th>Sienna Score (1-5)</th><th>GH Score (1-5)</th></tr></thead>
+    <tbody>
+      <tr><td>Sliding/door ease with kids</td><td>___</td><td>___</td></tr>
+      <tr><td>Driver comfort feel</td><td>___</td><td>___</td></tr>
+      <tr><td>Tanvi driving comfort</td><td>___</td><td>___</td></tr>
+      <tr><td>Road noise / smoothness</td><td>___</td><td>___</td></tr>
+      <tr><td>3rd row comfort</td><td>___</td><td>___</td></tr>
+      <tr><td>Cargo space feel</td><td>___</td><td>___</td></tr>
+      <tr><td>Infotainment / tech</td><td>___</td><td>___</td></tr>
+      <tr><td>Overall interior quality</td><td>___</td><td>___</td></tr>
+      <tr><td>Gut feeling / would I be happy daily?</td><td>___</td><td>___</td></tr>
+      <tr style="background:#f9f9f9"><td><strong>TOTAL</strong></td><td><strong>___/45</strong></td><td><strong>___/45</strong></td></tr>
+    </tbody>
+  </table>
+  <div class="note">Fill this in immediately after the test drive while impressions are fresh. The car with the higher score after both drives is your answer.</div>
+</div>
+
+<!-- KEY INSIGHT -->
+<div class="card">
+  <h2>Key Things to Notice During Drive</h2>
+  <div class="two-col">
+    <div>
+      <h3>🚗 Sienna — What to Watch For</h3>
+      <ul style="font-size:13px; padding-left:16px; line-height:1.8">
+        <li>Does the sliding door feel natural and easy?</li>
+        <li>Can you walk through to 2nd row easily?</li>
+        <li>Does it feel surprisingly light for its size?</li>
+        <li>Is it quieter than you expected at highway speed?</li>
+        <li>Do you forget it's a minivan once you're driving?</li>
+      </ul>
+    </div>
+    <div>
+      <h3>🚙 GH — What to Watch For</h3>
+      <ul style="font-size:13px; padding-left:16px; line-height:1.8">
+        <li>Does the 3rd row feel significantly better than Sienna?</li>
+        <li>Does the cargo space feel adequate with 3 rows up?</li>
+        <li>Can you reach the 2nd row kids with car seats installed?</li>
+        <li>Does it feel worth the $2-4K premium over Sienna?</li>
+        <li>Does the premium interior justify choosing it?</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- FINANCIAL REMINDER -->
+<div class="card">
+  <h2>Financial Context</h2>
+  <table>
+    <thead><tr><th>Item</th><th>Sienna Woodland AWD</th><th>GH Hybrid XLE AWD</th></tr></thead>
+    <tbody>
+      <tr><td>Used price</td><td>$40-44K</td><td>$42-46K</td></tr>
+      <tr><td>Down payment ($5K)</td><td>$35-39K financed</td><td>$37-41K financed</td></tr>
+      <tr><td>Monthly (~7.5%, 5yr)</td><td>~$700-780/mo</td><td>~$740-820/mo</td></tr>
+      <tr><td>+ Mercedes payment</td><td>+$700</td><td>+$700</td></tr>
+      <tr><td><strong>Total monthly (14mo)</strong></td><td><strong>~$1,400-1,480</strong></td><td><strong>~$1,440-1,520</strong></td></tr>
+      <tr><td>Annual fuel cost</td><td>~$1,250</td><td>~$1,500</td></tr>
+      <tr><td>5-yr fuel savings</td><td>+$1,250 saved</td><td>baseline</td></tr>
+      <tr><td>5-yr total cost difference</td><td>✅ ~$3,500 cheaper</td><td>~$3,500 more</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<p style="text-align:center; color:#8e8e93; font-size:12px; margin-top:24px; margin-bottom:8px">
+  Tushanvi — Building Generational Wealth · Car Plan 2027 · Created Aug 10, 2026
+</p>
+
+</body>
+</html>
