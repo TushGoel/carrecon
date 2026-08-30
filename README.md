@@ -84,8 +84,8 @@ graph TD
 ## Setup
 
 ```bash
-git clone https://github.com/TushGoel/car-research.git
-cd car-research
+git clone https://github.com/TushGoel/carrecon.git
+cd carrecon
 
 python3 -m venv .venv
 source .venv/bin/activate
@@ -174,20 +174,21 @@ python3 scripts/epa_specs_fetcher.py
 ## Project Structure
 
 ```
-car-research/
-├── main.py                    # CLI entry point — search any car
+carrecon/
+├── main.py
 ├── requirements.txt
 ├── scrapers/
-│   ├── base.py                # Stealth Playwright base class
-│   ├── cargurus.py            # CarGurus scraper
-│   └── __init__.py
+│   ├── base.py  autotrader.py  cargurus.py  carmax.py
 ├── scripts/
-│   ├── epa_specs_fetcher.py   # Official MPG via EPA API
-│   └── toyota_lexus_scraper.py
-├── docs/
-│   └── Test_Drive_Guide.html  # Interactive test drive checklist
+│   ├── new_car_prices.py      # MSRP from manufacturer sites
+│   ├── analyze_history.py     # Price trend analysis
+│   ├── generate_report.py     # HTML comparison report
+│   └── epa_specs_fetcher.py
+├── tests/
+│   ├── test_price_parser.py
+│   ├── test_url_builders.py
+│   └── test_scraper_mock.py
 └── data/
-    └── toyota_lexus_official_specs.json
 ```
 
 ---
@@ -211,12 +212,12 @@ Car prices fluctuate weekly based on supply, season, and inventory. A manual sna
 
 ## Roadmap
 
-- [ ] Add CarMax scraper
-- [ ] Add AutoTrader scraper
-- [ ] Weekly price tracking via GitHub Actions cron
-- [ ] HTML comparison report generator
+- [x] Add CarMax scraper ✅
+- [x] Add AutoTrader scraper ✅
+- [x] Weekly price tracking via GitHub Actions cron ✅
+- [x] HTML comparison report generator ✅
+- [x] Parallel scraping across sources ✅
 - [ ] KBB fair market value integration
-- [ ] Add Honda, Hyundai, Kia, Ford official specs
 
 ---
 
