@@ -5,7 +5,7 @@
 
 **Live car prices from sites that block everyone else.**
 
-An open-source tool that fetches **used car prices from Cars.com and CarGurus** and **official specs from the EPA** — bypassing bot protection using Playwright with stealth mode.
+An open-source tool that fetches **used car prices from Cars.com and CarGurus** and **official specs from the EPA** — rendering full browser sessions with Playwright to handle sites that block simple HTTP requests.
 
 Works for **any make, model, year range, and ZIP code.**
 
@@ -13,9 +13,9 @@ Works for **any make, model, year range, and ZIP code.**
 
 ## Why I Built This
 
-I was researching a family car purchase and spent hours manually clicking through bot checks on Cars.com, CarGurus, and Edmunds — copying prices into a spreadsheet, refreshing pages, losing data. I asked AI assistants for help. Every one of them hit the same wall: **bot detection blocks AI access to every major car site.**
+I was researching a family car purchase and spent hours manually clicking through bot checks on Cars.com, CarGurus, and Edmunds — copying prices into a spreadsheet, refreshing pages, losing data. I asked AI assistants for help. Every one of them hit the same wall: **every major car site blocks simple automated requests.**
 
-So I built the bypass. This tool runs a real Chromium browser with stealth mode — indistinguishable from a human visitor — aggregates live prices across all four major used car sites and six manufacturer websites, extracts structured data, and lets you search any car with a single command.
+So I built a browser-based aggregator. This tool runs a real Chromium browser session via Playwright, aggregates live prices across all four major used car sites and six manufacturer websites, extracts structured data, and lets you search any car with a single command.
 
 **Built and tested using Claude Code as the development environment.** What used to take hours of manual browsing now takes one command.
 
@@ -36,7 +36,7 @@ Every major car listing site blocks automated access:
 - Toyota.com, Lexus.com → 403 on simple HTTP requests
 - KBB, Edmunds → rate limiting + auth walls
 
-This tool runs a **real browser with stealth mode** that sites cannot distinguish from a human visitor — then extracts and structures the pricing data.
+This tool runs a **real browser session via Playwright** — rendering pages the same way a standard browser would — then extracts and structures the pricing data.
 
 ---
 
@@ -44,8 +44,8 @@ This tool runs a **real browser with stealth mode** that sites cannot distinguis
 
 | Feature | How |
 |---------|-----|
-| **Used car prices** | Playwright stealth → Cars.com, CarGurus, AutoTrader, CarMax |
-| **New car MSRP** | Playwright stealth → Toyota, Lexus, Honda, Hyundai, Ford, Chevrolet |
+| **Used car prices** | Playwright (browser automation) → Cars.com, CarGurus, AutoTrader, CarMax |
+| **New car MSRP** | Playwright (browser automation) → Toyota, Lexus, Honda, Hyundai, Ford, Chevrolet |
 | **Official MPG data** | EPA fueleconomy.gov free API (no auth required) |
 | **Structured output** | Price, year, mileage, deal rating, monthly payment |
 | **Multiple output formats** | Table (default), JSON, CSV |
@@ -53,7 +53,7 @@ This tool runs a **real browser with stealth mode** that sites cannot distinguis
 | **Price trend analysis** | `scripts/analyze_history.py` — track depreciation over time |
 | **Weekly price tracking** | GitHub Actions cron — auto-commits snapshots every Monday |
 
-> All sites listed block standard HTTP requests. This tool bypasses bot detection using Playwright stealth mode — running a real Chromium browser indistinguishable from a human visitor.
+> All sites listed block standard HTTP requests. This tool uses Playwright to run a full browser session, so pages render the same way they would for any visitor.
 
 ---
 
@@ -63,7 +63,7 @@ This tool runs a **real browser with stealth mode** that sites cannot distinguis
 graph TD
     A[CLI\n--make --model --zip\n--year-min --format --sources] --> B[URL Builder\nper source]
 
-    subgraph Sources_Bypassed_With_Playwright_Stealth
+    subgraph Sources_Requiring_Browser_Rendering
         B --> C[Cars.com]
         B --> D[CarGurus]
         B --> E[AutoTrader]
@@ -129,7 +129,7 @@ python3 main.py --make toyota --model "grand highlander" --zip 90210 --year-min 
 ### Get official new car MSRP from manufacturer websites
 
 Toyota, Lexus, Honda, Hyundai, Ford, Chevrolet all block standard HTTP requests.
-This tool bypasses their bot detection to fetch official pricing and trim data:
+This tool uses the same Playwright browser automation to fetch official pricing and trim data:
 
 ```bash
 # List available models for a manufacturer
